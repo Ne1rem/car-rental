@@ -25,7 +25,7 @@ const Modal = ({ closeModalHandler, rentalCarHandler }) => {
         >
           <img src={x} alt="x" />
         </div>
-        <img src={car.img} alt="car_image" className={css.carImage} />
+        <img src={!car.img ? car.photoLink : car.img} alt="car_image" className={css.carImage} />
         <div className={css.text}>
           <h2 className={css.title}>
             {car.make}

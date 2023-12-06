@@ -75,6 +75,7 @@ const Cart = () => {
                   <CartItem
                     id={car.id}
                     img={car.img}
+                    photoLink={car.photoLink}
                     make={car.make}
                     model={car.model}
                     year={car.year}
@@ -99,7 +100,7 @@ const Cart = () => {
       <div className={css.rightAside}>
         {galleryCars.length > 0 ? (
           <div className={css.modal}>
-            <img src={car.img} alt="car_image" className={css.carImage} />
+            <img src={!car.img ? car.photoLink : car.img} alt="car_image" className={css.carImage} />
             <div className={css.text}>
               <h2 className={css.title}>
                 {car.make}
