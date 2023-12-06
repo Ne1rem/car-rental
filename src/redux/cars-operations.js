@@ -4,7 +4,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const fetchCars = createAsyncThunk('cars/getCars', async () => {
   try {
     const response = await fetch(
-      'https://6520f3caa4199548356ca9b5.mockapi.io/advert',
+      'https://65705c4109586eff66413773.mockapi.io/getCar/CarRender',
       {
         method: 'GET',
         headers: { 'content-type': 'application/json' },

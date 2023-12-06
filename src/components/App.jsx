@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(carsOperations.fetchCars());
-  }, [dispatch]); // eslint-disable-line
+  }, [dispatch]);
 
   return (
     <Routes>

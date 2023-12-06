@@ -397,6 +397,7 @@ const Catalog = () => {
                   <CarCard
                     id={car.id}
                     img={car.img}
+                    photoLink={car.photoLink}
                     make={car.make}
                     model={car.model}
                     year={car.year}
