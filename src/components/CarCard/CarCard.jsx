@@ -8,6 +8,7 @@ import carsSelectors from 'redux/cars-selectors';
 const CarCard = ({
   id,
   img,
+  photoLink,
   make,
   model,
   year,
@@ -25,7 +26,7 @@ const CarCard = ({
   return (
     <>
       <div className={css.imageWrapper}>
-        <img src={img} alt="car_image" className={css.carImage} />
+        <img src={!img ? photoLink : img} alt="car_image" className={css.carImage} />
         <img
           src={isFavorite ? heartRed : heart}
           alt="heart"
