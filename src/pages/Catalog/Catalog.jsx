@@ -266,7 +266,6 @@ const Catalog = () => {
     }, 200);
   };
 
-  /* MODAL HANDLERS*/
   const openModalHandler = e => {
     dispatch(setModalCar(e.target.id));
     dispatch(setModal(true));
@@ -401,7 +400,7 @@ const Catalog = () => {
                     make={car.make}
                     model={car.model}
                     year={car.year}
-                    rentalPrice={car.rentalPrice}
+                    rentalPrice={car.rentalPrice} 
                     address={car.address}
                     type={car.type}
                     functionalities={car.functionalities}

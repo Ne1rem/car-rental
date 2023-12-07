@@ -4,8 +4,10 @@ import css from './Home.module.css';
 import hero1 from 'assets/hero1.svg';
 import hero2 from 'assets/hero2.svg';
 import hero3 from 'assets/hero3.svg';
-import { useDispatch } from 'react-redux';
-import { setActivePage } from 'redux/cars-slice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setActivePage, setModal, setModalCar } from 'redux/cars-slice';
+import CarCard from 'components/CarCard/CarCard';
+import carsSelectors from 'redux/cars-selectors';
 
 const Home = () => {
   const TEL_NUMBER = process.env.REACT_APP_TEL;
@@ -43,58 +45,61 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, [dispatch, show]);
 
+    const galleryCars = useSelector(carsSelectors.getFilteredCars);
+
+    const openModalHandler = e => {
+      dispatch(setModalCar(e.target.id));
+      dispatch(setModal(true));
+  
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', escHandler);
+    };
+  
+    const closeModalHandler = e => {
+      if (e.target.id === 'overlay' || e.currentTarget.id === 'closeModal') {
+        dispatch(setModal(false));
+        window.removeEventListener('keydown', escHandler);
+      }
+      document.body.style.overflow = 'unset';
+    };
+  
+    const escHandler = e => {
+      if (e.code === 'Escape') {
+        dispatch(setModal(false));
+        window.removeEventListener('keydown', escHandler);
+      }
+    };
+
   return (
     <>
       <section className={css.section}>
-        <div className={css.hero}>
-          <div className={css.imagesDiv}>
-            <img
-              src={hero1}
-              alt="hero"
-              className={css.heroImage}
-              style={{ opacity: opacity1 }}
-              id="image1"
-            />
-            <img
-              src={hero2}
-              alt="hero"
-              className={css.heroImage}
-              style={{ opacity: opacity2 }}
-              id="image2"
-            />
-            <img
-              src={hero3}
-              alt="hero"
-              className={css.heroImage}
-              style={{ opacity: opacity3 }}
-              id="image3"
-            />
-          </div>
-        </div>
+      <p className={css.heroBest}>Best Rental Cars</p>
+      {galleryCars.map(car => {
+              return (
+                <li className={css.carCard} key={car.id}>
+                  <CarCard
+                    id={car.id}
+                    img={car.img}
+                    photoLink={car.photoLink}
+                    make={car.make}
+                    model={car.model}
+                    year={car.year}
+                    rentalPrice={car.rentalPrice} 
+                    address={car.address}
+                    type={car.type}
+                    functionalities={car.functionalities}
+                    mileage={car.mileage}
+                    rentalCompany={car.rentalCompany}
+                    openModalHandler={openModalHandler}
+                  />
+                </li>
+              );
+            })}
       </section>
       <div className={css.info} style={{ marginTop: margin }}>
         <h1>DriveEasy Rental</h1>
         <h2>The best car rental service in the world </h2>
-        <p className={css.text} style={{ opacity: opacity1 }}>
-          Discover freedom on four wheels with DriveEasy Rental Your journey,
-          your way – start your adventure today!
-        </p>
-        <p className={css.text} style={{ opacity: opacity2 }}>
-          Whether you're planning a road trip, a business journey, or just need
-          a reliable set of wheels, we've got you covered.
-        </p>
-        <p className={css.text} style={{ opacity: opacity3 }}>
-          Choose from our wide selection of quality vehicles, book with ease,
-          and hit the road with confidence.
-        </p>
         <div className={css.buttons}>
-          <button
-            type="button"
-            className={css.rentalCarBtn}
-            onClick={() => window.open(`tel:+${TEL_NUMBER}`)}
-          >
-            Rental car
-          </button>
           <NavLink to="/catalog" className={css.toCatalogLink}>
             <button type="button" className={css.toCatalogBtn}>
               Catalog
