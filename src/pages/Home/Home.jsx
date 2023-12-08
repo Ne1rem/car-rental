@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './Home.module.css';
-import hero1 from 'assets/hero1.svg';
-import hero2 from 'assets/hero2.svg';
-import hero3 from 'assets/hero3.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { setActivePage, setModal, setModalCar } from 'redux/cars-slice';
 import CarCard from 'components/CarCard/CarCard';
 import carsSelectors from 'redux/cars-selectors';
+import Modal from 'components/Modal/Modal';
+import Notiflix from 'notiflix';
 
 const Home = () => {
   const TEL_NUMBER = process.env.REACT_APP_TEL;
+
+  const isModalOn = useSelector(carsSelectors.getModalOn);
 
   const [opacity1, setOpacity1] = useState(1);
   const [opacity2, setOpacity2] = useState(0);
@@ -70,8 +71,21 @@ const Home = () => {
       }
     };
 
+    const rentalCarHandler = () => {
+      Notiflix.Notify.init({
+        zindex: 9999999,
+      });
+      Notiflix.Notify.success('Contact us!');
+    };
+
   return (
     <>
+    {isModalOn && (
+        <Modal
+          closeModalHandler={closeModalHandler}
+          rentalCarHandler={rentalCarHandler}
+        />
+      )}
       <section className={css.section}>
       <p className={css.heroBest}>Best Rental Cars</p>
       {galleryCars.map(car => {
