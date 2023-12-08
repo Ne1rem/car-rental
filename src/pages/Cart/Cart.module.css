@@ -41,6 +41,7 @@
   background-color: rgb(245, 241, 241);
   padding: 13px;
   border-radius: 20px;
+  list-style: none;
 }
 
 .carCard:not(:last-child) {

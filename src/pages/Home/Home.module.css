@@ -112,9 +112,7 @@
   background-color: rgba(11, 68, 205, 1);
 }
 .heroBest{
-  position: absolute;
   width: 1200px;
-  z-index: 99;
   margin-left: auto;
   text-align: center;
   margin-right: auto;
@@ -122,5 +120,104 @@
   font-size: 32px;
   line-height: 36px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 1);
+  margin-bottom: 30px;
+  color: rgba(11, 68, 205, 1);
+}
+.HomeimageWrappers {
+  position: relative;
+  width: 274px;
+  height: 268px;
+  margin-bottom: 14px;
+}
+.homeCard{
+  list-style: none;
+}
+.HomecarImage {
+  width: 900px;
+  height: 600px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.HomeaddFavorite {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+}
+
+.Hometitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-right: 9px;
+  color: rgba(18, 20, 23, 1);
+  margin-bottom: 15px;
+}
+
+.Homemodel {
+  margin-left: 3px;
+  color: rgba(52, 112, 255, 1);
+}
+
+.Homeyear {
+  margin-left: 3px;
+}
+
+.Homeprice {
+  display: inline;
+}
+
+.Hometags {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 270px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 1.Home5;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.Hometags p {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(18, 20, 23, 0.Home5);
+}
+
+.Hometags span {
+  color: rgba(18, 20, 23, 0.Home1);
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.HomeDivText{
+  display: flex;
+  /* position: relative; */
+}
+.HomelearnMoreBtn {
+  width: 100%;
+  height: 44px;
+  background-color: rgba(52, 112, 255, 1);
+  border: 0px;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  outline: none;
+}
+
+.HomelearnMoreBtn:hover {
+  background-color: rgba(11, 68, 205, 1);
+  border: 0px;
+}
+
+.HomelearnMoreBtn:active {
+  box-shadow: rgba(0, 0, 0, 0.Home1) 0px 5px 10px;
 }
