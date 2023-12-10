@@ -105,6 +105,7 @@ const Cart = () => {
               alt="car_image"
               className={css.carImage}
             />
+            <div className={css.textCartColumn}>
             <div className={css.text}>
               <h2 className={css.title}>
                 {car.make}
@@ -178,6 +179,7 @@ const Cart = () => {
                 Rental Car
               </a>
             </button>
+            </div>
           </div>
         ) : (
           <div className={css.noItemsRight}>

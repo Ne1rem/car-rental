@@ -11,8 +11,6 @@
 .rightAside {
   display: flex;
   margin-top: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
 .scrollTitle {
@@ -114,16 +112,16 @@
 
 .modal {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   font-family: 'Manrope';
   position: relative;
   width: 800px;
-  height: 950px;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 1);
   padding: 40px;
   box-sizing: border-box;
+  gap: 25px;
 }
 
 .carImage {
@@ -136,8 +134,13 @@
 
 .text {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
+.textCartColumn{
+  display: flex;
+  flex-direction: column;
+}
 .title {
   font-size: 18px;
   line-height: 24px;
@@ -161,7 +164,7 @@
 }
 
 .tags {
-  width: 100%;
+
   height: 40px;
   font-size: 12px;
   line-height: 1.5;
@@ -279,6 +282,7 @@
 .rentalCarBtnA{
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
+  padding: 12px 47px 12px 47px
 }
 .rentalCarBtn:hover {
   background-color: rgba(11, 68, 205, 1);
