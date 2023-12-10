@@ -21,9 +21,7 @@
 .info {
   position: relative;
   width: 1200px;
-  margin-top: 600px;
-  margin-left: auto;
-  margin-right: auto;
+text-align: center;
   font-family: 'Manrope';
   font-size: 32px;
   line-height: 36px;
@@ -91,7 +89,7 @@
   font-family: 'Manrope';
   width: 168px;
   height: 44px;
-  background-color: rgba(11, 68, 205, 1);
+  background-color: rgba(11, 68, 205, 0.9);
   border: 2px solid rgba(52, 112, 255, 1);
   border-radius: 12px;
   color: white;
@@ -111,9 +109,10 @@
   background-color: rgba(11, 68, 205, 1);
 }
 .heroBest{
+  position: relative;
   width: 1200px;
+  margin-top: 600px;
   margin-left: auto;
-  text-align: center;
   margin-right: auto;
   font-family: 'Manrope';
   font-size: 32px;

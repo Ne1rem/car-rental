@@ -100,7 +100,11 @@ const Cart = () => {
       <div className={css.rightAside}>
         {galleryCars.length > 0 ? (
           <div className={css.modal}>
-            <img src={!car.img ? car.photoLink : car.img} alt="car_image" className={css.carImage} />
+            <img
+              src={!car.img ? car.photoLink : car.img}
+              alt="car_image"
+              className={css.carImage}
+            />
             <div className={css.text}>
               <h2 className={css.title}>
                 {car.make}
@@ -169,13 +173,10 @@ const Cart = () => {
                 </li>
               </ul>
             </div>
-            <button
-              type="button"
-              className={css.rentalCarBtn}
-              id={car.id}
-              onClick={() => window.open(`tel:+${TEL_NUMBER}`)}
-            >
-              Rental car
+            <button type="button" className={css.rentalCarBtn}>
+              <a className={css.rentalCarBtnA} href={`tel:+${TEL_NUMBER}`}>
+                Rental Car
+              </a>
             </button>
           </div>
         ) : (

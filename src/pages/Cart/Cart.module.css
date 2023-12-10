@@ -256,6 +256,10 @@
   padding: 0;
 }
 
+.rentalCarBtnA{
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
 .rentalCarBtn:hover {
   background-color: rgba(11, 68, 205, 1);
 }

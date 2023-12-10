@@ -13,7 +13,6 @@ const HomeCard = ({
   type,
   mileage,
   rentalCompany,
-  openModalHandler,
 }) => {
   return (
     <>

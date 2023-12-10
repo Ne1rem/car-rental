@@ -25,7 +25,11 @@ const Modal = ({ closeModalHandler, rentalCarHandler }) => {
         >
           <img src={x} alt="x" />
         </div>
-        <img src={!car.img ? car.photoLink : car.img} alt="car_image" className={css.carImage} />
+        <img
+          src={!car.img ? car.photoLink : car.img}
+          alt="car_image"
+          className={css.carImage}
+        />
         <div className={css.text}>
           <h2 className={css.title}>
             {car.make}
@@ -95,13 +99,10 @@ const Modal = ({ closeModalHandler, rentalCarHandler }) => {
           </ul>
         </div>
 
-        <button
-          type="button"
-          className={css.rentalCarBtn}
-          onClick={() => window.open(`tel:+${TEL_NUMBER}`)}
-          id={car.id}
-        >
-          Rental car
+        <button type="button" className={css.rentalCarBtn}>
+          <a className={css.catalogRentalCarBtnA} href={`tel:+${TEL_NUMBER}`}>
+            Rental Car
+          </a>
         </button>
       </div>
     </div>

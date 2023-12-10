@@ -64,7 +64,10 @@ const Home = () => {
   return (
     <>
       <section className={css.section}>
-        <p className={css.heroBest}>Best Rental Cars</p>
+      <div className={css.info}>
+        <h1>Uk Rental Car</h1>
+        <h2>The best rental car service in Ukraine </h2>
+      </div>
         <ul className={css.homeCardList}>
           {galleryCars
             .filter(car => parseFloat(car.rentalPrice.substring(1)) > 200)
@@ -99,11 +102,9 @@ const Home = () => {
             </NavLink>
           </div>
         </ul>
+        
       </section>
-      <div className={css.info}>
-        <h1>Uk Rental Car</h1>
-        <h2>The best rental car service in Ukraine </h2>
-      </div>
+      <p className={css.heroBest}>Our UK Rental Car company is a dynamically developing company, one of the largest in Kyiv, given the number of vehicle collection/delivery points.</p>
     </>
   );
 };
