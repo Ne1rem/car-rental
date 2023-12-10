@@ -56,10 +56,10 @@ const Cart = () => {
 
   return (
     <section className={css.pageWrapper}>
-      <aside className={css.leftAside}>
-        <h2 className={css.leftTitle}>Favorite Cars</h2>
+      <aside className={css.scrollAside}>
+        <h2 className={css.scrollTitle}>Favorite Cars</h2>
         {galleryCars.length > 0 ? (
-          <ul className={css.leftUl} id="leftUl">
+          <ul className={css.scrollUl} id="leftUl">
             {galleryCars.map(car => {
               return (
                 <li
