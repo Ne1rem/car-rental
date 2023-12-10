@@ -12,7 +12,7 @@ const Header = () => {
     <div className={css.container}>
       <div className={css.header}>
         <NavLink to="/" className={css.logoLink}>
-          <h1>DriveEasy Rental</h1>
+          <h1>Uk Rental Car</h1>
         </NavLink>
 
         <div className={css.navlinks}>
