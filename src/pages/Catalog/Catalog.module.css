@@ -126,7 +126,10 @@ p {
   margin-right: 10px;
   cursor: pointer;
 }
-
+.searchButton:hover{
+  background-color: rgba(11, 68, 205, 1);
+  border: 0px;
+}
 .clearButton {
   display: flex;
   justify-content: center;

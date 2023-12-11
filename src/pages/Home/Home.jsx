@@ -95,11 +95,6 @@ const Home = () => {
           </div>
         </ul>
       </section>
-      <p className={css.heroBest}>
-        Our UK Rental Car company is a dynamically developing company, one of
-        the largest in Kyiv, given the number of vehicle collection/delivery
-        points.
-      </p>
     </>
   );
 };

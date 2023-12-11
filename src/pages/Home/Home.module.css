@@ -89,8 +89,8 @@ text-align: center;
   font-family: 'Manrope';
   width: 168px;
   height: 44px;
-  background-color: rgba(11, 68, 205, 0.9);
-  border: 2px solid rgba(52, 112, 255, 1);
+  background-color: rgba(52, 112, 255, 1);
+  border: 2px solid rgba(52, 112, 255, 0.9);
   border-radius: 12px;
   color: white;
   font-size: 14px;
@@ -101,12 +101,12 @@ text-align: center;
 }
 
 .toCatalogBtn:hover {
-  background-color: rgba(52, 112, 255, 1);
+  background-color: rgba(11, 68, 205, 1);
+  border: 0px;
 }
 
 .toCatalogBtn:active {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
-  background-color: rgba(11, 68, 205, 1);
 }
 .heroBest{
   position: relative;
@@ -153,7 +153,7 @@ text-align: center;
   font-weight: 500;
   padding-right: 9px;
   color: rgba(18, 20, 23, 1);
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .Homemodel {
@@ -194,16 +194,16 @@ text-align: center;
 }
 
 .Hometags p {
-  line-height: 18px;
-  font-size: 12px;
+  line-height: 22px;
+  font-size: 22px;
   font-weight: 400;
   color: rgba(18, 20, 23, 0.Home5);
 }
 
 .Hometags span {
   color: rgba(18, 20, 23, 0.Home1);
-  line-height: 16px;
-  font-size: 16px;
+  line-height: 22px;
+  font-size: 22px;
   font-weight: 600;
 }
 .HomeDivText{

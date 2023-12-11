@@ -97,7 +97,7 @@ const Cart = () => {
           </div>
         )}
       </aside>
-      <div className={css.rightAside}>
+      <div className={css.centreAside}>
         {galleryCars.length > 0 ? (
           <div className={css.modal}>
             <img
@@ -106,91 +106,97 @@ const Cart = () => {
               className={css.carImage}
             />
             <div className={css.textCartColumn}>
-            <div className={css.text}>
-              <h2 className={css.title}>
-                {car.make}
-                <span className={css.model}>{car.model},</span>
-                <span className={css.year}>{car.year}</span>
-              </h2>
-              <p className={css.tags} id="tags1">
-                {car.address.split(',')[1]} <span> | </span>
-                {car.address.split(',')[2]}
-                <span> | </span>
-                Id: {car.id}
-                <span> | </span>
-                Year: {car.year}
-                <span> | </span>
-                Type: {car.type}
-                <br />
-                Fuel Consumption: {car.fuelConsumption}
-                <span> | </span>
-                Engine Size: {car.engineSize}
-              </p>
-
-              <p className={css.description}>{car.description}</p>
-              <div className={css.functionalities}>
-                <h3 className={css.h3}>Accessories and functionalities:</h3>
-
-                <p className={css.tags} id="tags2">
-                  {car.accessories[0]}
+              <div className={css.text}>
+                <h2 className={css.title}>
+                  {car.make}
+                  <span className={css.model}>{car.model},</span>
+                  <span className={css.year}>{car.year}</span>
+                </h2>
+                <p className={css.tags} id="tags1">
+                  {car.address.split(',')[1]} <span> | </span>
+                  {car.address.split(',')[2]}
                   <span> | </span>
-                  {car.accessories[1]}
+                  Id: {car.id}
                   <span> | </span>
-                  {car.accessories[2]}
+                  Year: {car.year}
+                  <span> | </span>
+                  Type: {car.type}
                   <br />
-                  {car.functionalities[0]}
+                  Fuel Consumption: {car.fuelConsumption}
                   <span> | </span>
-                  {car.functionalities[1]}
-                  <span> | </span>
-                  {car.functionalities[2]}
+                  Engine Size: {car.engineSize}
                 </p>
-              </div>
-            </div>
 
-            <div className={css.rentalConditions}>
-              <h3 className={css.h3}>Rental Conditions:</h3>
-              <ul className={css.conditionsUl}>
-                <li className={css.conditionsLi}>
-                  <p id="montserrat">
-                    {car.rentalConditions.split('\n')[0].slice(0, -2)}
-                    <span>{car.rentalConditions.split('\n')[0].slice(-2)}</span>
+                <p className={css.description}>{car.description}</p>
+                <div className={css.functionalities}>
+                  <h3 className={css.h3}>Accessories and functionalities:</h3>
+
+                  <p className={css.tags} id="tags2">
+                    {car.accessories[0]}
+                    <span> | </span>
+                    {car.accessories[1]}
+                    <span> | </span>
+                    {car.accessories[2]}
+                    <br />
+                    {car.functionalities[0]}
+                    <span> | </span>
+                    {car.functionalities[1]}
+                    <span> | </span>
+                    {car.functionalities[2]}
                   </p>
-                </li>
-                <li className={css.conditionsLi}>
-                  <p id="manrope">{car.rentalConditions.split('\n')[1]}</p>
-                </li>
-                <li className={css.conditionsLi}>
-                  <p id="manrope">{car.rentalConditions.split('\n')[2]}</p>
-                </li>
-                <li className={css.conditionsLi}>
-                  <p id="montserrat">
-                    Mileage: <span>{car.mileage}</span>
-                  </p>
-                </li>
-                <li className={css.conditionsLi}>
-                  <p id="montserrat">
-                    Price: <span>{car.rentalPrice.slice(1)}$</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <button type="button" className={css.rentalCarBtn}>
-              <a className={css.rentalCarBtnA} href={`tel:+${TEL_NUMBER}`}>
-                Rental Car
-              </a>
-            </button>
+                </div>
+              </div>
+
+              <div className={css.rentalConditions}>
+                <h3 className={css.h3}>Rental Conditions:</h3>
+                <ul className={css.conditionsUl}>
+                  <li className={css.conditionsLi}>
+                    <p id="montserrat">
+                      {car.rentalConditions.split('\n')[0].slice(0, -2)}
+                      <span>
+                        {car.rentalConditions.split('\n')[0].slice(-2)}
+                      </span>
+                    </p>
+                  </li>
+                  <li className={css.conditionsLi}>
+                    <p id="manrope">{car.rentalConditions.split('\n')[1]}</p>
+                  </li>
+                  <li className={css.conditionsLi}>
+                    <p id="manrope">{car.rentalConditions.split('\n')[2]}</p>
+                  </li>
+                  <li className={css.conditionsLi}>
+                    <p id="montserrat">
+                      Mileage: <span>{car.mileage}</span>
+                    </p>
+                  </li>
+                  <li className={css.conditionsLi}>
+                    <p id="montserrat">
+                      Price: <span>{car.rentalPrice.slice(1)}$</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" className={css.rentalCarBtn}>
+                <a className={css.rentalCarBtnA} href={`tel:+${TEL_NUMBER}`}>
+                  Rental Car
+                </a>
+              </button>
             </div>
           </div>
         ) : (
-          <div className={css.noItemsRight}>
+          <div className={css.noItemsCentr}>
             <img
               src={carRental}
               alt="empty_cart"
-              className={css.noItemsRightImage}
+              className={css.noItemsCentrImage}
             />
-            <NavLink className={css.nothingText} to="/catalog">
-              To the Catalog
-            </NavLink>
+            <div className={css.buttons}>
+              <NavLink to="/catalog" className={css.toCatalogLink}>
+                <button type="button" className={css.toCatalogBtn}>
+                  See all catalog
+                </button>
+              </NavLink>
+            </div>
           </div>
         )}
       </div>

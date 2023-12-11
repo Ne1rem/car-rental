@@ -8,11 +8,41 @@
   box-shadow: 0px 7px 10px -5px #888;
 }
 
-.rightAside {
+.centreAside {
   display: flex;
   margin-top: 20px;
+  justify-content: center;
+}
+.toCatalogLink {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
+.toCatalogBtn {
+  font-family: 'Manrope';
+  width: 168px;
+  height: 44px;
+  background-color: rgba(52, 112, 255, 1);
+  border: 2px solid rgba(52, 112, 255, 0.9);
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  box-sizing: border-box;
+  padding: 0;
+}
+.toCatalogBtn:hover {
+  background-color: rgba(11, 68, 205, 1);
+  border: 0px;
+}
+
+.toCatalogBtn:active {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+}     
 .scrollTitle {
   color: rgba(52, 112, 255, 1);
 
@@ -35,7 +65,7 @@
   margin: 0;
   margin-bottom: 10px;
   list-style: none;
-  gap: 5px
+  gap: 5px;
 }
 
 .scrollUl::-webkit-scrollbar {
@@ -49,14 +79,13 @@
 
 .scrollUl::-webkit-scrollbar-thumb {
   background-color: rgba(52, 112, 255, 1);
-  border-radius: 12px; 
+  border-radius: 12px;
   border: 1px solid rgba(11, 68, 205, 1);
 }
 
-
 .carCard {
-  flex: 0 0 auto; 
-  margin-right: 10px; 
+  flex: 0 0 auto;
+  margin-right: 10px;
   width: 274px;
   height: 308px;
   list-style: none;
@@ -94,7 +123,7 @@
   line-height: 24px;
 }
 
-.noItemsRight {
+.noItemsCentr {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +132,7 @@
   padding: 50px 0 10px;
 }
 
-.noItemsRightImage {
+.noItemsCentrImage {
   width: 500px;
   margin-right: 10px;
   margin-bottom: 30px;
@@ -137,7 +166,7 @@
   display: flex;
   flex-direction: column;
 }
-.textCartColumn{
+.textCartColumn {
   display: flex;
   flex-direction: column;
 }
@@ -164,7 +193,6 @@
 }
 
 .tags {
-
   height: 40px;
   font-size: 12px;
   line-height: 1.5;
@@ -279,10 +307,10 @@
   padding: 0;
 }
 
-.rentalCarBtnA{
+.rentalCarBtnA {
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
-  padding: 12px 47px 12px 47px
+  padding: 12px 47px 12px 47px;
 }
 .rentalCarBtn:hover {
   background-color: rgba(11, 68, 205, 1);
