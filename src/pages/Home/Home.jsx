@@ -71,8 +71,8 @@ const Home = () => {
                 <li key={car.id} className={css.homeCard} style={{ opacity: opacity }}>
                   <HomeCard
                     id={car.id}
-                    img={car.img}
                     photoLink={car.photoLink}
+                    img={car.img}
                     make={car.make}
                     model={car.model}
                     year={car.year}
